@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float xPower = 30f;
-    [SerializeField] float yPower = 35f;
-    [SerializeField] float xRange = 10f;
-    [SerializeField] float yRange = 6f;
+    [Header("General Setup Settings")]
+    [Tooltip("The speed of player movement on horizontal axis")] [SerializeField] float xPower = 30f;
+    [Tooltip("The speed of player movement on vertical axis")] [SerializeField] float yPower = 35f;
+    [Tooltip("Determine the constraints of player movement on horizontal axis")] [SerializeField] float xRange = 10f;
+    [Tooltip("Determine the constraints of player movement on vertical axis")] [SerializeField] float yRange = 6f;
+
+    [Header("Laser Gun Array")]
+    [Tooltip("Add all the lasers here")] [SerializeField] GameObject[] lasers;
+
+    [Header("Screen Position Based Tuning")]
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 2.5f;
+
+    [Header("Player Input Based Tuning")]
+    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float controlRollFactor = -15f;
-    [SerializeField] GameObject[] lasers;
+
 
     float horizontalInput;
     float verticalInput;
