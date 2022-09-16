@@ -6,16 +6,25 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] Transform parent;
-
-    ScoreBoard scoreBoard;
     [SerializeField] int increaseAmount = 15;
     [SerializeField] int enemyHitPoints = 6;
+
+    ScoreBoard scoreBoard;
+    GameObject parentGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        parentGameObject = GameObject.FindWithTag("Spawn At Runtime");
+        AddRigidbody();
+    }
+
+    void AddRigidbody()
+    {
+        // Add rigidbody to the gameobject and disable gravity.
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
     }
 
     // Update is called once per frame
@@ -32,7 +41,7 @@ public class Enemy : MonoBehaviour
     void ProcessHit()
     {
         GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        vfx.transform.parent = parentGameObject.transform;
         scoreBoard.IncreaseScore(increaseAmount);
         enemyHitPoints--;
 
@@ -73,7 +82,7 @@ public class Enemy : MonoBehaviour
     void KillEnemy()
     {
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        vfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
     }
 }
