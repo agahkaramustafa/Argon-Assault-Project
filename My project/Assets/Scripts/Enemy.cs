@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform parent;
 
     ScoreBoard scoreBoard;
-    [SerializeField] int increaseAmount = 1;
+    [SerializeField] int increaseAmount = 15;
 
     // Start is called before the first frame update
     void Start()
