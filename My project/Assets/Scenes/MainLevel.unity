@@ -154,11 +154,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &79847108 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5752808935016678747, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
-  m_PrefabInstance: {fileID: 6547865527738448532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &412422263
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,8 +187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 357896432914447415, guid: a52e9d92c56b2f041ab1f40bc751b5de, type: 3}
+  hitVFX: {fileID: 357896432914447415, guid: 4682134d0904f294c9abdd6eb361ce15, type: 3}
   parent: {fileID: 8106903}
   increaseAmount: 1
+  enemyHitPoints: 6
 --- !u!136 &412422265
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -228,7 +225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5d9f928ce5587874d87c6deb8eb87e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,8 +303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 357896432914447415, guid: a52e9d92c56b2f041ab1f40bc751b5de, type: 3}
+  hitVFX: {fileID: 357896432914447415, guid: 4682134d0904f294c9abdd6eb361ce15, type: 3}
   parent: {fileID: 8106903}
   increaseAmount: 1
+  enemyHitPoints: 6
 --- !u!136 &564912863
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -342,7 +341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5d9f928ce5587874d87c6deb8eb87e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -686,7 +685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 68170d1c8877137448609e5a6d3fb5f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -744,8 +743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 357896432914447415, guid: a52e9d92c56b2f041ab1f40bc751b5de, type: 3}
+  hitVFX: {fileID: 357896432914447415, guid: 4682134d0904f294c9abdd6eb361ce15, type: 3}
   parent: {fileID: 8106903}
   increaseAmount: 1
+  enemyHitPoints: 6
 --- !u!1 &1818166650
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,8 +847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 357896432914447415, guid: a52e9d92c56b2f041ab1f40bc751b5de, type: 3}
+  hitVFX: {fileID: 357896432914447415, guid: 4682134d0904f294c9abdd6eb361ce15, type: 3}
   parent: {fileID: 8106903}
   increaseAmount: 1
+  enemyHitPoints: 6
 --- !u!136 &1871958813
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -882,7 +885,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5d9f928ce5587874d87c6deb8eb87e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -965,8 +968,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 357896432914447415, guid: a52e9d92c56b2f041ab1f40bc751b5de, type: 3}
+  hitVFX: {fileID: 357896432914447415, guid: 4682134d0904f294c9abdd6eb361ce15, type: 3}
   parent: {fileID: 8106903}
   increaseAmount: 15
+  enemyHitPoints: 6
 --- !u!136 &2027864060
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1001,7 +1006,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5d9f928ce5587874d87c6deb8eb87e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1056,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 761736734, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
       propertyPath: crashParticle
       value: 
-      objectReference: {fileID: 79847108}
+      objectReference: {fileID: 0}
     - target: {fileID: 5752808935016678747, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -1113,7 +1118,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 761736734, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
 --- !u!1001 &6653316123456318676
 PrefabInstance:

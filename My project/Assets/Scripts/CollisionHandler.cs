@@ -7,6 +7,7 @@ public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float reloadDelay;
     [SerializeField] ParticleSystem crashParticle;
+    
 
     void OnTriggerEnter(Collider other)
     {
