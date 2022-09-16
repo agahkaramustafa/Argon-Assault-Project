@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float reloadDelay;
+    [SerializeField] ParticleSystem crashParticle;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,8 +15,9 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        crashParticle.Play();
+        GetComponent<MeshRenderer>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
-
         Invoke(nameof(ProcessReload), 1f);
     }
 
