@@ -532,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 3686218145441157797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.67818, y: 1.81, z: 15.12}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8670058412296203476}
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 357896432914447415, guid: a52e9d92c56b2f041ab1f40bc751b5de, type: 3}
   hitVFX: {fileID: 357896432914447415, guid: 4682134d0904f294c9abdd6eb361ce15, type: 3}
-  increaseAmount: 15
+  increaseAmount: 90
   enemyHitPoints: 1
 --- !u!1 &4290629893568450505
 GameObject:

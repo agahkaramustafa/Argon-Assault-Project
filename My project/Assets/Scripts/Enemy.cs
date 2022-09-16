@@ -42,7 +42,6 @@ public class Enemy : MonoBehaviour
     {
         GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentGameObject.transform;
-        scoreBoard.IncreaseScore(increaseAmount);
         enemyHitPoints--;
 
         if (enemyHitPoints == 0)
@@ -81,6 +80,7 @@ public class Enemy : MonoBehaviour
 
     void KillEnemy()
     {
+        scoreBoard.IncreaseScore(increaseAmount);
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
