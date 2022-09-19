@@ -1290,6 +1290,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1360242702, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
+      propertyPath: m_Pitch
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360242702, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
+      propertyPath: m_Volume
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360242702, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d3b1e5cc1c13d404eb7502ed8bc47b55, type: 3}
     - target: {fileID: 6547865526377983656, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
       propertyPath: m_Name
       value: Player Rig
@@ -1336,14 +1348,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6547865526377983658, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298729802865770692, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
-      propertyPath: m_ShowToolkit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298729802865770692, guid: a429c32caf96f41478e07f63ed6d3bd7, type: 3}
-      propertyPath: m_ShowCustomSorter
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

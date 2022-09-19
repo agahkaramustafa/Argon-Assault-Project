@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The speed of player movement on vertical axis")] [SerializeField] float yPower = 35f;
     [Tooltip("Determine the constraints of player movement on horizontal axis")] [SerializeField] float xRange = 10f;
     [Tooltip("Determine the constraints of player movement on vertical axis")] [SerializeField] float yRange = 6f;
+    AudioSource audioSource;
 
     [Header("Laser Gun Array")]
     [Tooltip("Add all the lasers here")] [SerializeField] GameObject[] lasers;
@@ -24,6 +25,11 @@ public class PlayerController : MonoBehaviour
 
     float horizontalInput;
     float verticalInput;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -70,6 +76,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             SetLasersActive(true);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
 
         else
